@@ -2,52 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="HawkEye">
-  <meta name="keywords" content="LiDAR, Event camera">
+  <meta name="description" content="HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion">
+  <meta name="keywords" content="LiDAR, Event Camera, Drone, Obstacle Avoidance">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>[MobiCom 2025] HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</title>
 
+  <!-- Google Analytics (optional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
+  <!-- Custom Styles for consistent media presentation -->
   <style>
-    .media-container {
+    .content-media {
       width: 100%;
-      max-width: 900px;  
-      margin: 20px auto; 
-    }
-
-    .responsive-media {
-      width: 100%;       
-      height: auto;     
-      display: block;    
-      margin-bottom: 1.5rem; 
-    }
-    
-    .responsive-media:last-child {
-      margin-bottom: 0;
+      max-width: 900px; /* Adjust max-width as needed */
+      margin: 1.5rem auto; /* Add some space around media */
+      display: block;
+      border-radius: 12px; /* Consistent rounded corners */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
   </style>
 
-
+  <!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -66,7 +55,7 @@
   </div>
 </nav>
 
-
+<!-- Title Section -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -74,18 +63,13 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</h1>
           <div class="is-size-5 publication-authors">
-            <h1 class="title is-4 publication-title", style="color:#6e6e6e;">ACM Mobicom 2025 Demo Submissions #96</h1>
-            <span class="author-block">
-              Anonymous authors</a></span>
-            
+            <h2 class="title is-4" style="color:#6e6e6e; margin-top: 1rem;">ACM MobiCom 2025 Demo Submission #96</h2>
+            <span class="author-block">Anonymous Authors</span>
           </div>
-
-
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- Links here -->
+              <!-- Links (e.g., PDF, Code) will go here -->
             </div>
-
           </div>
         </div>
       </div>
@@ -93,33 +77,40 @@
   </div>
 </section>
 
+<!-- Indoor Experiments Section -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body" style="text-align:center">
-      <h2 class="title is-3">Indoor Experiments</h2>
-
-      <div class="media-container">
-        <video class="responsive-media" autoplay muted loop playsinline>
-          <source src="./static/videos/indoor.mp4" type="video/mp4">
-      <h2 class="subtitle has-text-centered">
-        We conduct indoor tests by randomly throwing objects such as a soccer ball and a badminton shuttlecock.
-      </h2>
-        </video>
-        
-        <img src="./static/images/indoor.png" alt="Indoor experiment scenarios" class="responsive-media">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <h2 class="title is-3">Indoor Experiments</h2>
+          <h3 class="subtitle has-text-centered" style="margin-top: -0.5rem; margin-bottom: 2rem;">
+            We conduct indoor tests by randomly throwing objects such as a soccer ball and a badminton shuttlecock.
+          </h3>
+        </div>
       </div>
-  
 
-      <div class="content has-text-justified">
-        <p>
-          <strong>Situation I.</strong> 
-          In the lower part of figure, the drone performs a reactive avoidance maneuver. When an object is detected at a safe distance (e.g., a badminton shuttlecock at &gt;1m), HawkEye autonomously plans and executes a smooth Turn Right trajectory, bypassing the obstacle without interruption.
-        </p>
+      <!-- Media content for indoor experiments -->
+      <video class="content-media" autoplay muted loop playsinline>
+        <source src="./static/videos/indoor.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="./static/images/indoor.png" alt="Diagram of indoor experiment scenarios with drone maneuvers" class="content-media">
 
-        <p>
-          <strong>Situation II.</strong> 
-          In the upper part of figure, the drone executes an emergency braking maneuver. Upon detecting a fast-approaching object (e.g., a soccer ball) within a critical proximity (&lt;1m, marked by the red arrow), HawkEye autonomously triggers an immediate Brake command to halt the UAV and prevent collision.
-        </p>
+      <!-- Description of indoor experiments -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              <strong>Situation I: Reactive Avoidance.</strong>
+              As shown in the lower part of the figure, when an object is detected at a safe distance (e.g., a badminton shuttlecock at >1m), HawkEye autonomously plans and executes a smooth "Turn Right" trajectory, bypassing the obstacle without interrupting its flight path.
+            </p>
+            <p>
+              <strong>Situation II: Emergency Braking.</strong>
+              In the upper part of the figure, upon detecting a fast-approaching object (e.g., a soccer ball) within a critical proximity (&lt;1m, marked by the red arrow), HawkEye autonomously triggers an immediate "Brake" command to halt the UAV and prevent a collision.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -127,120 +118,119 @@
 
 <hr>
 
-
+<!-- Abstract Section -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Drones are increasingly used in applications such as last-mile delivery and infrastructure inspection, but their safe operation, especially in high-speed scenarios, remains a critical challenge. 
-          Existing vision- and LiDAR-based obstacle localization methods suffer from motion blur, latency, and low spatio-temporal resolution, making them inadequate for detecting and tracking fast-moving objects.
-          In this work, we present HawkEye, a drone obstacle avoidance system that fuses event cameras and LiDAR to achieve high-frequency, accurate 3D tracking of dynamic objects. 
-          By leveraging the complementary strengths of both sensors, Hawkeye enables robust real-time sensing and safe evasive maneuvers, addressing a key requirement for the large-scale deployment of autonomous drones.
+          Drones are increasingly used in applications such as last-mile delivery and infrastructure inspection, but their safe operation, especially in high-speed scenarios, remains a critical challenge. Existing vision- and LiDAR-based obstacle localization methods suffer from motion blur, latency, and low spatio-temporal resolution, making them inadequate for detecting and tracking fast-moving objects. In this work, we present HawkEye, a drone obstacle avoidance system that fuses event cameras and LiDAR to achieve high-frequency, accurate 3D tracking of dynamic objects. By leveraging the complementary strengths of both sensors, HawkEye enables robust real-time sensing and safe evasive maneuvers, addressing a key requirement for the large-scale deployment of autonomous drones.
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
 <hr>
 
+<!-- System Overview Section -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">System Overview</h2>
         <div class="content has-text-justified">
-        <p>
-          <b>&#8226; Stage 1:</b> Event-Based 2D Motion Tracking.<br>
-          The pipeline begins by processing the raw event stream  to extract a dense optical flow field that captures fine-grained motion information.
-          This capability enables reliable segmentation of dynamic objects, continuous tracking of their 2‑D trajectories, and high‑frequency velocity estimation.
-        </p>
-        <p>
-          <b>&#8226; Stage 2:</b> Event-Guided LiDAR Motion Compensation.<br>
-          Sparse LiDAR points, each associated with a unique timestamp (top-left of <i>Fig. System Overview</i>), are then corrected for motion distortion.
-          This de-smearing process is guided by velocity vectors estimated from the event stream, yielding a physically accurate point cloud of the object at a unified reference time.
-        </p>
-        <p>
-          <b>&#8226; Stage 3:</b> 3D Trajectory Generation.<br>
-          Finally, the 2D trajectory is fused with the motion-compensated point cloud.
-          A depth value is assigned to each 2D track point by associating it with the nearest 3D points in the cloud, resulting in a high-fidelity 3D trajectory (right of <i>Fig. System Overview</i>) that accurately captures the object's spatial position and motion over time.
-        </p>
-        <img src="./static/images/system.png" alt="Image 1" width="100%">
+          <!-- Replaced <p> tags with a semantic list for clarity -->
+          <ul>
+            <li><b>Stage 1: Event-Based 2D Motion Tracking.</b><br>
+              The pipeline begins by processing the raw event stream to extract a dense optical flow field that captures fine-grained motion information. This capability enables reliable segmentation of dynamic objects, continuous tracking of their 2-D trajectories, and high‑frequency velocity estimation.
+            </li>
+            <li style="margin-top: 1em;"><b>Stage 2: Event-Guided LiDAR Motion Compensation.</b><br>
+              Sparse LiDAR points, each associated with a unique timestamp, are then corrected for motion distortion. This de-smearing process is guided by velocity vectors estimated from the event stream, yielding a physically accurate point cloud of the object at a unified reference time.
+            </li>
+            <li style="margin-top: 1em;"><b>Stage 3: 3D Trajectory Generation.</b><br>
+              Finally, the 2D trajectory is fused with the motion-compensated point cloud. A depth value is assigned to each 2D track point by associating it with the nearest 3D points in the cloud, resulting in a high-fidelity 3D trajectory that accurately captures the object's spatial position and motion over time.
+            </li>
+          </ul>
         </div>
+        <img src="./static/images/system.png" alt="HawkEye system pipeline diagram showing the three stages of fusion" class="content-media">
       </div>
     </div>
-
   </div>
 </section>
 
 <hr>
 
+<!-- Implementation Section -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-3">Implementation and Experiments Setup</h2>
         <div class="content has-text-justified">
-            Our system is deployed on a custom-built UAV, with the hardware configuration shown in below. 
-            The onboard computation is performed by an Intel NUC 12. 
-            The perception module integrates two primary sensors:
-            <i>(1)</i> a Prophesee EVK4 HD event camera equipped with a 1280×720 Sony IMX636ES sensor, and 
-            <i>(2)</i> a MID-360 LiDAR, which provides 360° horizontal field-of-view depth measurements.
-            As shown in the right panel of figure, the dynamic target objects (a ball and a die) are equipped with reflective markers to facilitate ground-truth validation.
-
-
+          <p>
+            Our system is deployed on a custom-built UAV, with the hardware configuration shown below. The onboard computation is performed by an Intel NUC 12. The perception module integrates two primary sensors: (1) a Prophesee EVK4 HD event camera equipped with a 1280×720 Sony IMX636ES sensor, and (2) a MID-360 LiDAR, which provides 360° horizontal field-of-view depth measurements. As shown in the right panel of the figure, the dynamic target objects (a ball and a die) are equipped with reflective markers to facilitate ground-truth validation.
+          </p>
         </div>
-        <img src="./static/images/implementation.png" alt="Image 1" width="100%">
+        <img src="./static/images/implementation.png" alt="Hardware setup showing the custom-built UAV with event camera, LiDAR, and target objects" class="content-media">
       </div>
     </div>
-
   </div>
 </section>
 
-
 <hr>
 
-<section class="airport evaluation">
+<!-- Outdoor Evaluation Section (Corrected and Refactored) -->
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <!-- Block 1: Title and Text -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Outdoor Evaluation</h2>
+        <div class="content has-text-justified">
+          <p>
+            We achieved a 100% success rate in obstacle depth estimation within the field of view, accomplished by throwing balls at various speeds and angles against a complex forest background.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+      
+<!-- Block 2: Image (Resized) -->
+    <div class="columns is-centered">
+      <!-- 
+        By changing 'is-full' to 'is-four-fifths', the column becomes narrower (80% width),
+        and the image inside it scales down automatically while staying centered.
+        This is a cleaner and more responsive approach.
+      -->
       <div class="column is-four-fifths">
-      <h2 class="title is-3">Outdoor Evaluation</h2>
+        <img src="./static/images/outdoor_path.png" alt="3D object trajectory plot from outdoor evaluation" class="content-media">
+      </div>
+    </div>
 
-      <h4 class="title is-4">Outdoor result</h4>
-      <img src="./static/images/casestudy.png" alt="Image 1" width="200%">
+    
 
-      <br><br>
-      <h4 class="title is-4">Experiments Video</h4>
-      <video id="teaser" width="640" height="360" autoplay muted loop playsinline height="40%">
-        <source src="./static/videos/outdoor_fusion.mp4"
-                type="video/mp4">
-      </video>
-
-      <br><br>
-
+    <!-- Block 3: Video -->
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <h4 class="title is-4" style="margin-top: 2rem;">Experiments Video</h4>
+        <video autoplay muted loop playsinline class="content-media">
+          <source src="./static/videos/outdoor_fusion.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
-            Website template from <a
-            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+          <p class="has-text-centered">
+            Website template from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 License</a>.
           </p>
         </div>
       </div>
