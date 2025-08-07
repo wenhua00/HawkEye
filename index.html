@@ -55,6 +55,8 @@
   </div>
 </nav>
 
+      
+      
 <!-- Title Section -->
 <section class="hero">
   <div class="hero-body">
@@ -62,11 +64,69 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">HawkEye: Practical In-Flight Obstacle Avoidance with Event Camera and LiDAR Fusion</h1>
+          
+          <!-- START: Beautified author and affiliation block with fine-tuned spacing -->
           <div class="is-size-5 publication-authors">
-            <h2 class="title is-4" style="color:#6e6e6e; margin-top: 1rem;">ACM MobiCom 2025 Demo Submission #96</h2>
-            <span class="author-block">Anonymous Authors</span>
+            
+            <!-- Updated submission number -->
+            <h2 class="title is-4" id="submission-line">ACM MobiCom 2025 Demo Submission #63</h2>
+            
+            <!-- Custom styles for perfect spacing and alignment -->
+            <style>
+              /* Controls the space above and below the "ACM MobiCom..." line */
+              #submission-line {
+                color: #6e6e6e;
+                margin-top: 1.5rem;
+                margin-bottom: 1.25rem;
+              }
+
+              /* Controls the space below the author names */
+              .author-block {
+                margin-bottom: 0.75rem;
+              }
+
+              /* Styles for the affiliation block */
+              .affiliations-block {
+                /* KEY CHANGE: Align text inside the block to the center */
+                text-align: center;
+                
+                font-size: 0.9em;
+                color: #4a4a4a;
+              }
+            </style>
+            
+            <!-- Author names with superscripts -->
+            <div class="author-block">
+              <span>Wenhua Ding<sup>1</sup>,</span>
+              <span>Zhengli Zhang<sup>1</sup>,</span>
+              <span>Xin Xu<sup>1</sup>,</span>
+              <span>Haoyang Wang<sup>1</sup>,</span>
+              <span>Yinan Zhu<sup>2</sup>,</span>
+              <br> <!-- Line break for better readability -->
+              <span>Shilong Ji<sup>1</sup>,</span>
+              <span>Xin Zhou<sup>3</sup>,</span>
+              <span>Jingao Xu<sup>4</sup>,</span>
+              <span>Dongyue Huang<sup>1</sup>,</span>
+              <span>Xinlei Chen<sup>1</sup></span>
+            </div>
+
+            <!-- All affiliations now in a two-line block -->
+            <div class="affiliations-block">
+              <!-- HTML structure remains the same -->
+              <div>
+                <sup>1</sup>SIGS, Tsinghua University, 
+                <sup>2</sup>South China University of Technology,
+              </div>
+              <div>
+                <sup>3</sup>Hong Kong University of Science and Technology, 
+                <sup>4</sup>Carnegie Mellon University
+              </div>
+            </div>
+
           </div>
-          <div class="column has-text-centered">
+          <!-- END: Beautified author and affiliation block with fine-tuned spacing -->
+
+          <div class="column has-text-centered" style="margin-top: 2rem;">
             <div class="publication-links">
               <!-- Links (e.g., PDF, Code) will go here -->
             </div>
@@ -76,6 +136,8 @@
     </div>
   </div>
 </section>
+    
+
 
 <!-- Indoor Experiments Section -->
 <section class="hero teaser">
@@ -84,13 +146,19 @@
       <div class="columns is-centered">
         <div class="column is-full has-text-centered">
           <h2 class="title is-3">Indoor Experiments</h2>
-          <h3 class="subtitle has-text-centered" style="margin-top: -0.5rem; margin-bottom: 2rem;">
-            We conduct indoor tests by randomly throwing objects such as a soccer ball and a badminton shuttlecock.
+          <!-- 
+            KEY CHANGE: Reduced margin-bottom from 2rem to 0.
+            Now the space is controlled solely by the .content-media class's top margin (1.5rem),
+            which is a much more reasonable distance.
+          -->
+          <h3 class="subtitle has-text-centered" style="margin-top: -0.5rem; margin-bottom: 0;">
+            We conducted indoor tests by randomly throwing objects such as a soccer ball and a badminton shuttlecock.
           </h3>
         </div>
       </div>
 
       <!-- Media content for indoor experiments -->
+      <!-- The content-media class itself provides a 1.5rem top margin, which is now the only space -->
       <video class="content-media" autoplay muted loop playsinline>
         <source src="./static/videos/indoor.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -100,7 +168,7 @@
       <!-- Description of indoor experiments -->
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <div class="content has-text-justified">
+          <div class="content has-text-justified" style="margin-top: 2rem;"> <!-- Added margin-top for space -->
             <p>
               <strong>Situation I: Reactive Avoidance.</strong>
               As shown in the lower part of the figure, when an object is detected at a safe distance (e.g., a badminton shuttlecock at >1m), HawkEye autonomously plans and executes a smooth "Turn Right" trajectory, bypassing the obstacle without interrupting its flight path.
@@ -115,7 +183,6 @@
     </div>
   </div>
 </section>
-
 <hr>
 
 <!-- Abstract Section -->
@@ -154,7 +221,7 @@
             </li>
           </ul>
         </div>
-        <img src="./static/images/system.png" alt="HawkEye system pipeline diagram showing the three stages of fusion" class="content-media">
+        <img src="./static/images/system2.png" alt="HawkEye system pipeline diagram showing the three stages of fusion" class="content-media">
       </div>
     </div>
   </div>
